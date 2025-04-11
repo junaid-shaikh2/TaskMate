@@ -14,7 +14,7 @@
     
     <title> {% block title %}
         Home
-    {% endblock title %} - MyTodo</title>
+    {% endblock title %} - TaskMate</title>
     <style>
         body {
             background: linear-gradient(to right, #e6ebed, #93d3ea);
@@ -27,7 +27,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">MyTodo</a>
+            <a class="navbar-brand" href="/">TaskMate</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -49,6 +49,91 @@
             </div>
             
     </nav>
+    <style>
+        .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #4497c0 !important;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+}
+
+.navbar-brand:hover {
+    color: #0b678f !important;
+    transform: scale(1.1);
+    text-shadow: 0 0 8px rgba(68, 151, 192, 0.6);
+}
+
+.navbar-brand::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0%;
+    height: 2px;
+    background-color: #0b678f;
+    transition: width 0.2s ease-in-out;
+}
+
+.navbar-brand:hover::after {
+    width: 100%;
+}
+.nav-link {
+    font-weight: 500;
+    color: #333 !important;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-link:hover {
+    color: #4497c0 !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    width: 0%;
+    height: 2px;
+    background-color: #4497c0;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+        .custom-navbar {
+            background: linear-gradient(to right, #ffffff, #c2e9f0); /
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #4497c0 !important; 
+        }
+    
+        .nav-link {
+            font-weight: 500;
+            color: #333 !important;
+            transition: color 0.3s ease-in-out;
+        }
+    
+        .nav-link:hover {
+            color: #4497c0 !important;
+        }
+    
+        .form-control {
+            border-radius: 20px;
+        }
+    
+        .btn-outline-dark {
+            border-radius: 20px;
+        }
+    </style>
     {% block body %}
 
     {% endblock body %}
